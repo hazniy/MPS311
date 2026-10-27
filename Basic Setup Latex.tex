@@ -1,10 +1,15 @@
 #They should understand machine learning by the report itself
+
 \documentclass[11pt, a4paper]{amsart}
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amssymb}
 \usepackage{parskip}
 \usepackage{listings}
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref} %produce clickable link
 \lstset{
 breaklines=true,
 language=Python,
@@ -21,6 +26,7 @@ showstringspaces=false,
 
 \section{Introduction}
 This project....
+\emph{``The Applied Probability Trust''}
 
 \subsection{Number of Vertices}
 Increasing...
@@ -30,4 +36,38 @@ Increasing...
   \item 
 \end{itemize}
 
+\begin{align*}
+\end{align*}
+
 \end{document}
+
+#write formula : 
+$ $ or \[ \] or 
+\begin{equation}
+	x^2 = 2.
+\label{eq:root-2} 
+\end{equation}
+The positive solution to equation\textasciitilde (\ref{eq:root-2}) is denoted $\sqrt{2}$.  #to refer back
+
+#attach image files : 
+\includegraphics{geogebra_image.pdf} %[scale=0.5] will make the img small, [width=8cm] will make the img smaller %[width=\textwidth] %[width=0.8\textwidth].
+Geogebra creates good diagrams; see Figure~\ref{fig:geogebra}
+\begin{figure}[tbh]
+\includegraphics[width=0.8\textwidth]{geogebra_image.pdf}
+\caption{A Geogebra picture}
+\label{fig:geogebra}
+\end{figure}
+
+#citing 
+A friend recommended I read some books~\cite{Lessing:Notebook} by Doris Lessing, starting with one of her most famous books. I spent six hours straight just eating up the content of this book~\cite{Coho:iewu}.
+Wiles was the person who proved Fermat's Last Theorem~\cite[Theorem~2.1]{Wiles:fermats-theorem}. %specific page/chapt of book 
+\begin{thebibliography}{99} %99 informs the widest number it is expecting for the citation label
+	\bibitem{Lessing:Notebook}
+		D.~Lessing,
+		\emph{The Golden Notebook},
+		HarperCollins Publishers, 2012.
+	\bibitem{Coho:iewu}
+		Colleen Hoover,
+		\emph{It Ends With Us},
+		Atria Books, 2016.
+\end{thebibliography}
